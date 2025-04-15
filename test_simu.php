@@ -1,5 +1,8 @@
 <?php
-include "simu.php";
+include_once "ClaseCliente.php";
+include_once "ClaseEmpresa.php";
+include_once "ClaseMoto.php";
+include_once "ClaseVenta.php";
 echo "hola";
 $objCliente1= new Cliente("Julian", "Bravo", "activo", "dni",42166032);
 
@@ -11,9 +14,8 @@ $moto2= new Moto(12,584000,2021,"Zanella Zr 150 Ohc",70,true);
 
 $moto3= new Moto(13,999900,2023,"Zanella Patagonian Eagle 250",55,false);
 
-$empresa= new Empresa("Alta Gama", "Av Arg 123",[$moto1,$moto2,$moto3],[$objCliente1,$objCliente2],[]);
+$empresa= new Empresa("Alta Gama", "Av Arg 123",[$objCliente1,$objCliente2],[$moto1,$moto2,$moto3],[]);
 
-// a partir del punto 5 no se como invocar a los metodos se me ocurre $metodo=regirtrarVentas($codMoto, $objCl)
 
 
 
