@@ -79,9 +79,9 @@ class Empresa{
         $cadena = (
             "Denominación: " . $this->getNomOf() . "\n" .
             "Dirección: " . $this->getDire() . "\n" .
-            "Clientes:\n" . $cadenaClientes .
-            "Motos:\n" . $cadenaMotos .
-            "Ventas:\n" . $cadenaVentas
+            "Clientes:\n" . $cadenaC .
+            "Motos:\n" . $cadenaM .
+            "Ventas:\n" . $cadenaV
         );
 
         return $cadena;
