@@ -56,11 +56,38 @@ class Empresa{
          $this->coleccionV=$colVNueva;
     }
 
+     public function __toString() {
+        $clientes = $this->getColeC();
+        $motos = $this->getColeM();
+        $ventas = $this->getColeV();
 
-    public function __toString()
-    {
-        return "El nombre es: ".$this->getNomOf().  "y su dire es: ".$this->getDire();
+        $cadenaC = "";
+        foreach ($clientes as $cliente) {
+            $cadenaC .= $cliente . "\n";
+        }
+
+        $cadenaM = "";
+        foreach ($motos as $moto) {
+            $cadenaM .= $moto . "\n";
+        }
+
+        $cadenaV = "";
+        foreach ($ventas as $venta) {
+            $cadenaV .= $venta . "\n";
+        }
+
+        $cadena = (
+            "Denominación: " . $this->getNomOf() . "\n" .
+            "Dirección: " . $this->getDire() . "\n" .
+            "Clientes:\n" . $cadenaClientes .
+            "Motos:\n" . $cadenaMotos .
+            "Ventas:\n" . $cadenaVentas
+        );
+
+        return $cadena;
     }
+
+   
 
     public function retornarMoto($codigoMotoIngresado){ 
         $coleccionM=$this->getColeM();
